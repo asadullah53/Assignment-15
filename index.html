@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assignment 15 | Roll # 17429</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2><ins>Asad Ullah</ins> | <ins>Roll # 17429</ins> | <ins>Assignment No. 15</ins></h2>
+
+    <div id="main-body">
+      <header>
+        <nav class="topnav">
+          <a href="#conditions">Condition </a>
+          <a href="#strings-handling">String</a>
+          <a href="#array-handling">Array </a>
+          <a href="#math-methods">Math & loop</a>
+        </nav>
+    </header>
+    <hr>
+      <!-- <nav>
+        <ul>
+          <li>
+            <a href="#conditions">Condition </a>
+          </li>
+          <li>
+            <a href="#strings-handling">String</a>
+          </li>
+          <li>
+            <a href="#array-handling">Array </a>
+          </li>
+          <li>
+            <a href="#math-methods">Math & loop</a>
+          </li>
+        </ul>
+      </nav> -->
+
+      <h1 id="conditions">Conditions</h1>
+      <div>
+        <h2>1. Write a js program to find maximum between two numbers.</h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Number" id="fnumber" />
+          <input type="number" , class="data-input" placeholder="Enter Number" id="snumber" />
+          <input
+            type="button"
+            class="btn"
+            value="Get Maximum Number"
+            onclick="maxNmbr()"
+          />
+        </form>
+        <h3 id="maxresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>2. Write a js program to find maximum between three numbers.</h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Number" id="fnumber1" />
+          <input type="number" , class="data-input" placeholder="Enter Number" id="snumber2" />
+          <input type="number" , class="data-input" placeholder="Enter Number" id="tnumber3" />
+          <input
+            type="button"
+            class="btn"
+            value="Get Maximum Number"
+            onclick="maxNmbr3()"
+          />
+        </form>
+        <h3 id="maxresult3"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          3. Write a js program to check whether a number is negative, positive
+          or zero.
+        </h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Number" id="nmbrtype" />
+          <input
+            type="button"
+            class="btn"
+            value="Get Number Type"
+            onclick="numberType()"
+          />
+        </form>
+        <h3 id="nmbrtyperesult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          4. Write a js program to check whether a number is divisible by 5 and
+          11 or not.
+        </h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Number" id="nmbrdiv" />
+          <input
+            type="button"
+            class="btn"
+            value="Divisible Number"
+            onclick="numberDivis()"
+          />
+        </form>
+        <h3 id="nmbrdivisible"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>5. Write a js program to check whether a number is even or odd.</h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Number" id="nmbrrem" />
+          <input
+            type="button"
+            class="btn"
+            value="Even Odd Number"
+            onclick="numberReminder()"
+          />
+        </form>
+        <h3 id="nmbrrmndr"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          6. Write a js program to check whether a year is leap year or not.
+        </h2>
+        <form>
+          <input type="number" , class="data-input" placeholder="Enter Year" id="lyear" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Leap Year"
+            onclick="leapYear()"
+          />
+        </form>
+        <h3 id="lyearresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          7. Write a js program to check whether a character is alphabet or not.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter Character" id="chrtype" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Character"
+            onclick="charType()"
+          />
+        </form>
+        <h3 id="chtyperesult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          8. Write a js program to input any alphabet and check whether it is
+          vowel or consonant.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter Alphabet" id="voweltxt" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Vowel"
+            onclick="vowelWords()"
+          />
+        </form>
+        <h3 id="vowelresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          9. Write a js program to input any character and check whether it is
+          alphabet, digit or special character.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter Any Character" id="wrdtype" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Character Type"
+            onclick="wordType()"
+          />
+        </form>
+        <h3 id="wrdtyperesult"></h3>
+      </div>
+      <hr />
+      <h1 id="strings-handling">Strings Handling</h1>
+      <div>
+        <h2>10. Write a js program to find length of a string.</h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="strlength" />
+          <input
+            type="button"
+            class="btn"
+            value="Check String Length"
+            onclick="stringLength()"
+          />
+        </form>
+        <h3 id="strlengthresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>11. Write a js program to copy one string to another string.</h2>
+        <form>
+          <input
+            type="text"
+            ,
+            class="data-input" placeholder="Enter String to copy"
+            id="copystr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Copy String"
+            onclick="copyString()"
+          />
+        </form>
+        <h3 id="copystrresult"></h3>
+        <h3 id="str2"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>12. Write a js program to concatenate two strings.</h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String 1" id="constr1" />
+          <input type="text" , class="data-input" placeholder="Enter String 2" id="constr2" />
+          <input
+            type="button"
+            class="btn"
+            value="Concatenate Both Strings"
+            onclick="concateString()"
+          />
+        </form>
+        <h3 id="constrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>13. Write a js program to compare two strings.</h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String 1" id="comstr1" />
+          <input type="text" , class="data-input" placeholder="Enter String 2" id="comstr2" />
+          <input
+            type="button"
+            class="btn"
+            value="Compare Both Strings"
+            onclick="compareString()"
+          />
+        </form>
+        <h3 id="comstrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          14. Write a js program to convert lowercase string to uppercase.
+        </h2>
+        <form>
+          <input
+            type="text"
+            ,
+            class="data-input" placeholder="Enter String in Lowercase"
+            id="lwrstr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Convert to UpperCase"
+            onclick="upperString()"
+          />
+        </form>
+        <h3 id="lwrstrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          15. Write a js program to convert uppercase string to lowercase.
+        </h2>
+        <form>
+          <input
+            type="text"
+            ,
+            class="data-input" placeholder="Enter String in Uppercase"
+            id="upperstr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Convert to LowerCase"
+            onclick="lowerString()"
+          />
+        </form>
+        <h3 id="upperstrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          16. Write a js program to toggle case of each character of a string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="togglestr" />
+          <input
+            type="button"
+            class="btn"
+            value="Convert to Toggle Case"
+            onclick="toggleString()"
+          />
+        </form>
+        <h3 id="togglestrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          17. Write a js program to find total number of alphabets, digits or
+          special character in a string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="totalnmbr" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Total Number"
+            onclick="totalNumber()"
+          />
+        </form>
+        <h3 id="totalalpharesult"></h3>
+        <h3 id="totalnmbrresult"></h3>
+        <h3 id="totalspclresult"></h3>
+      </div>
+      <hr />
+
+      <div>
+        <h2>
+          18. Write a js program to count total number of vowels and consonants
+          in a string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="totalvwl" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Total Vowels and Consonants"
+            onclick="totalVowel()"
+          />
+        </form>
+        <h3 id="totalvwlresult"></h3>
+        <h3 id="totalcontresult"></h3>
+      </div>
+      <hr />
+
+      <div>
+        <h2>
+          19. Write a js program to count total number of words in a string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="totalwrds" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Total Words"
+            onclick="totalWords()"
+          />
+        </form>
+        <h3 id="totalwrdsresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>20. Write a js program to find reverse of a string.</h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="reversestr" />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Reverse String"
+            onclick="reverseString()"
+          />
+        </form>
+        <h3 id="reversestrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          21. Write a js program to check whether a string is palindrome or not.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="pldstr" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Palindrome"
+            onclick="palindromeString()"
+          />
+        </form>
+        <h3 id="pldstrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          22. Write a js program to reverse order of words in a given string
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="rvswrd" />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Reverse"
+            onclick="reverseWords()"
+          />
+        </form>
+        <h3 id="rvswrdresult"></h3>
+      </div>
+      <hr />
+
+      <div>
+        <h2>
+          23. Write a js program to find first occurrence of a character in a
+          given string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="chrfind1" />
+          <input type="text" , class="data-input" placeholder="Enter Character" id="chrfind2" />
+          <input
+            type="button"
+            class="btn"
+            value="Check First Index of Character"
+            onclick="characterFind()"
+          />
+        </form>
+        <h3 id="chrfindresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          24. Write a js program to find last occurrence of a character in a
+          given string.
+        </h2>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter String" id="lchrfind1" />
+          <input type="text" , class="data-input" placeholder="Enter Character" id="lchrfind2" />
+          <input
+            type="button"
+            class="btn"
+            value="Check Last Index of Character"
+            onclick="lastCharacterFind()"
+          />
+        </form>
+        <h3 id="lchrfindresult"></h3>
+      </div>
+      <hr />
+      <h1 id="array-handling">Array Handling</h1>
+      <div>
+        <h2>25. Write a js program to read and print elements of array.</h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="arrnmbr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="arrayElements()"
+          />
+        </form>
+        <h3 id="arrnmbrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          26. Write a js program to print all negative elements in an array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="arrnegnmbr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="arrayNegativeElements()"
+          />
+        </form>
+        <h3 id="arrnegnmbrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>27. Write a js program to find sum of all array elements.</h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="arrsumnmbr"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="arraySumElements()"
+          />
+        </form>
+        <h3 id="arrsumnmbrresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          28. Write a js program to find maximum and minimum element in an
+          array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="arrmaxmin"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="arrayMaxMin()"
+          />
+        </form>
+        <h3 id="arrmaxminresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          29. Write a js program to find second largest element in an array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="scndnum"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="secondNumber()"
+          />
+        </form>
+        <h3 id="scndnumresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          30. Write a js program to count total number of even and odd elements
+          in an array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="evnoddnum"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="evenOddNumber()"
+          />
+        </form>
+        <h3 id="evnoddnumresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          31. Write a js program to count total number of negative elements in
+          an array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter"
+            id="arrnegnmbrcount"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="arrayNegativeElementsCount()"
+          />
+        </form>
+        <h3 id="arrnegnmbrcountresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          32. Write a js program to copy all elements from an array to another
+          array.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter in 1st Array"
+            id="copyarry"
+          />
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Enter in 2nd Array"
+            id="copyarry2"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements for 2nd Array"
+            onclick="copyArray()"
+          />
+        </form>
+        <h3 id="copyarryresult"></h3>
+        <h3 id="copyarryresult1"></h3>
+        <h3 id="copyarryresult2"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>33. Write a js program to insert an element in an array.</h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="How many Element Do you want to Add in Array"
+            id="insrtelmnt"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Write Elements"
+            onclick="insertElement()"
+          />
+        </form>
+        <h3 id="insrtelmntresult"></h3>
+        <form>
+          <input type="text" , class="data-input" placeholder="Enter New Element" id="newelmnt" />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Add New Elements"
+            onclick="newElement()"
+          />
+        </form>
+        <h3 id="newelmntresult"></h3>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          34. Write a js program to delete an element from an array at specified
+          position.
+        </h2>
+        <form>
+          <input
+            type="number"
+            ,
+            class="data-input" placeholder="Enter Index Number to Delete Element"
+            id="dltindx"
+          />
+          <input
+            type="button"
+            class="btn"
+            value="Click to Delete Element"
+            onclick="deleteElement()"
+          />
+          <h3></h3>
+          <h3 id="dltelmntresult">
+            Array = [Faisalabad,Karachi,Multan,Islamabad,Lahore]
+          </h3>
+        </form>
+      </div>
+      <hr />
+      <h1 id="math-methods">Math Methods</h1>
+    </div>
+    <script src="java.js"></script>
+  </body>
+</html>
