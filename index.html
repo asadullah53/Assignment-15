@@ -5,35 +5,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2><ins>Asad Ullah</ins> | <ins>Roll # 17429</ins> | <ins>Assignment No. 15</ins></h2>
+    <h2 id="top"><ins>Asad Ullah</ins> | <ins>Roll # 17429</ins> | <ins>Assignment No. 15</ins></h2>
 
     <div id="main-body">
       <header>
         <nav class="topnav">
-          <a href="#conditions">Condition </a>
-          <a href="#strings-handling">String</a>
-          <a href="#array-handling">Array </a>
-          <a href="#math-methods">Math & loop</a>
+          <a href="#conditions">Conditions </a>
+          <a href="#strings-handling">Strings</a>
+          <a href="#array-handling">Arrays </a>
+          <a href="#math-methods">Maths</a>
+          <a href="#loops">Loops</a>
         </nav>
     </header>
     <hr>
-      <!-- <nav>
-        <ul>
-          <li>
-            <a href="#conditions">Condition </a>
-          </li>
-          <li>
-            <a href="#strings-handling">String</a>
-          </li>
-          <li>
-            <a href="#array-handling">Array </a>
-          </li>
-          <li>
-            <a href="#math-methods">Math & loop</a>
-          </li>
-        </ul>
-      </nav> -->
-
       <h1 id="conditions">Conditions</h1>
       <div>
         <h2>1. Write a js program to find maximum between two numbers.</h2>
@@ -653,26 +637,107 @@
           position.
         </h2>
         <form>
-          <input
-            type="number"
-            ,
-            class="data-input" placeholder="Enter Index Number to Delete Element"
-            id="dltindx"
-          />
-          <input
-            type="button"
-            class="btn"
-            value="Click to Delete Element"
-            onclick="deleteElement()"
-          />
-          <h3></h3>
-          <h3 id="dltelmntresult">
-            Array = [Faisalabad,Karachi,Multan,Islamabad,Lahore]
-          </h3>
+          <input type="number" class="data-input" id="entrNum" placeholder="How Many Elements Do You Want to Enter in the Array">
+          <input type="button" class="btn" value="Click to Add New Elements" onclick="getArray()">
+          <h3 id="result"></h3>
+          <input type="number" class="data-input" id="delIndex" placeholder="Enter Index Number to Delete Element">
+          <input type="button" class="btn" value="Delete Element" onclick="deleteElement()">
+          <h3 id="newresult"></h3>
         </form>
       </div>
       <hr />
       <h1 id="math-methods">Math Methods</h1>
+      <div>
+        <h2>
+          35. Write a js program to round the number, without using the math.round method!
+        </h2>
+        <form>
+          <input type="number" class="data-input" id="rndnum" placeholder="Enter Number">
+          <input type="button" class="btn" value="Click to Get Round Number" onclick="roundNumber()">
+          <h3 id="rndnumresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          36. Write a js program to ceil the number without using math.ceil method!
+        </h2>
+        <form>
+          <input type="number" class="data-input" id="clnum" placeholder="Enter Number">
+          <input type="button" class="btn" value="Click to Get Ceil Number" onclick="ceilNumber()">
+          <h3 id="clnumresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          37. Write a js program to floor the number without using the math.floor method!
+        </h2>
+        <form>
+          <input type="number" class="data-input" id="flnum" placeholder="Enter Number">
+          <input type="button" class="btn" value="Click to Get Floor Number" onclick="floorNumber()">
+          <h3 id="flnumresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <h1 id="loops">Loops</h1>
+      <div>
+        <h2>
+          38. Write a js program to print all natural numbers from 1 to n. - using for loop
+        </h2>
+        <form>
+          <input type="number" class="data-input" id="numlp" placeholder="Enter Number">
+          <input type="button" class="btn" value="Click to Get Natural Number" onclick="numberLoop()">
+          <h3 id="numlpresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          39. Write a js program to print all natural numbers in reverse (from n to 1). - using for loop
+        </h2>
+        <form>
+          <input type="number" class="data-input" id="rvnumlp" placeholder="Enter Number">
+          <input type="button" class="btn" value="Click to Get Reverse Number" onclick="reverseNumberLoop()">
+          <h3 id="rvnumlpresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          40. Write a js program to print all alphabets from a to z. - using for loop
+        </h2>
+        <form>
+          <input type="button" class="btn" value="Click to Get Alphabets in Upper Case" onclick="azUpperLoop()">
+          <h3 id="azuppresult"></h3>
+          <input type="button" class="btn" value="Click to Get Alphabets in LowerCase" onclick="azLoop()">
+          <h3 id="azlwpresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          41. Write a js program to print all even numbers between 1 to 100. - using forloop
+        </h2>
+        <form>
+          <input type="button" class="btn" value="Click to Get Even Number from 1 to 100" onclick="evenNumer()">
+          <h3 id="evennumresult"></h3>
+        </form>
+      </div>
+      <hr />
+      <div>
+        <h2>
+          42. Write a js program to print all odd number between 1 to 100.
+        </h2>
+        <form>
+          <input type="button" class="btn" value="Click to Get Odd Number from 1 to 100" onclick="oddNumer()">
+          <h3 id="oddnumresult"></h3>
+        </form>
+      </div>
+      <hr />
+	<h1>Happy Coding!</h1>
+  <hr>
+  <input type="button" id="lbtn" value="Go to Top" onclick="window.location='#top';">
     </div>
     <script src="java.js"></script>
   </body>
